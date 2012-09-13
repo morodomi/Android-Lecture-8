@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+		<shape android:shape="rectangle">
+		    <padding
+		        android:left="8sp"
+		        android:right="8sp"
+		        android:top="5sp"
+		        android:bottom="5sp"
+		    />
+		    <stroke
+		        android:width="1sp"
+		        android:color="@color/iphone__ui_table_cell_stroke"
+		    />
+            <solid android:color="@color/iphone__ui_table_cell_selected" />
+		</shape>
+    </item>
+	<item>
+		<shape android:shape="rectangle">
+		    <padding
+		        android:left="8sp"
+		        android:right="8sp"
+		        android:top="5sp"
+		        android:bottom="5sp"
+		    />
+		    <stroke
+		        android:width="1sp"
+		        android:color="@color/iphone__ui_table_cell_stroke"
+		    />
+            <solid android:color="#ffffffff" />
+		</shape>
+	</item>
+</selector>

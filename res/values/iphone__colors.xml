@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="iphone__toolbar_top">#ffb5c0ce</color>
+    <color name="iphone__toolbar_bottom">#ff6d83a1</color>
+    <color name="iphone__highlight_top">#ffffc600</color>
+    <color name="iphone__highlight_bottom">#ffcf9600</color>
+    <color name="iphone__toolbar_fg">#ffffffff</color>
+    <color name="iphone__navigation_button_pressed_top">#ff3a4e78</color>
+    <color name="iphone__navigation_button_pressed_bottom">#ff193161</color>
+    <color name="iphone__navigation_button_top">#ff8aa1bf</color>
+    <color name="iphone__navigation_button_bottom">#ff4a6c9b</color>
+    <color name="iphone__navigation_button_stroke">#ff273053</color>
+    <color name="iphone__ui_navigation_item_top">#ff616160</color>
+    <color name="iphone__ui_navigation_item_bottom">#ff4f4f4f</color>
+    <color name="iphone__ui_navigation_item_text">#ffffffff</color>
+    <color name="iphone__ui_button_top">#fff96c93</color>
+    <color name="iphone__ui_button_middle">#ffec497b</color>
+    <color name="iphone__ui_button_bottom">#ff313131</color>
+    <color name="iphone__ui_button_off_top">#ffbebdbd</color>
+    <color name="iphone__ui_button_off_bottom">#ff6b615d</color>
+    <color name="iphone__ui_table_view_bg">#ffcfd0d1</color>
+    <color name="iphone__ui_table_header_top">#ffd84b72</color>
+    <color name="iphone__ui_table_header_bottom">#ffab1643</color>
+    <color name="iphone__ui_table_header_text">#ffa1a2a5</color>
+    <color name="iphone__ui_table_cell_stroke">#ffdcd4ba</color>
+    <color name="iphone__ui_table_cell_selected">#ffffb7cb</color>
+    <color name="iphone__ui_table_cell_text">#ff000000</color>
+    <color name="iphone__clear">#00000000</color>
+    <color name="iphone__gray">#dd000000</color>
+</resources>

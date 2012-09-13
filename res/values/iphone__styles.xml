@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="UINavigationBar">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">48dp</item>
+		<item name="android:background">@drawable/iphone__ui_navigation_bar</item>
+	</style>
+	<style name="UINavigationBarTitle">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">48dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:textColor">@color/iphone__ui_navigation_item_text</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	<style name="UINavigationBarProgress">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:maxHeight">48dp</item>
+		<item name="android:maxWidth">48dp</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:minWidth">48dp</item>
+		<item name="android:layout_margin">4dp</item>
+	</style>
+	<style name="UIBarButtonItem">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:background">@drawable/iphone__ui_navigation_bar_button</item>
+		<item name="android:tint">@color/iphone__toolbar_fg</item>
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	<style
+		name="UIBarButtonItemLeft"
+		parent="@style/UIBarButtonItem"
+	>
+		<item name="android:layout_alignParentLeft">true</item>
+		<item name="android:layout_marginLeft">5sp</item>
+	</style>
+	<style
+		name="UIBarButtonItemRight"
+		parent="@style/UIBarButtonItem"
+	>
+		<item name="android:layout_alignParentRight">true</item>
+		<item name="android:layout_marginRight">5sp</item>
+	</style>
+    <style
+        name="UIBarButtonImage"
+    >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:background">@drawable/iphone__ui_navigation_bar_button</item>
+        <item name="android:tint">@color/iphone__toolbar_fg</item>
+    </style>
+    <style
+    	name="UIBarButtonImageLeft"
+    	parent="@style/UIBarButtonImage">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">5sp</item>
+    </style>
+    <style
+        name="UIBarButtonImageRight"
+        parent="@style/UIBarButtonImage"
+    	>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">5sp</item>
+    </style>
+	<style name="UITableViewHeader">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginTop">10sp</item>
+		<item name="android:layout_marginLeft">20sp</item>
+		<item name="android:layout_marginRight">0sp</item>
+		<item name="android:layout_marginBottom">5sp</item>
+		<item name="android:textColor">@color/iphone__ui_table_header_text</item>
+		<item name="android:textSize">22sp</item>
+		<item name="android:background">#00ffffff</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	<style name="UITableViewCell">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginLeft">10sp</item>
+		<item name="android:layout_marginRight">10sp</item>
+		<item name="android:textColor">@color/iphone__ui_table_cell_text</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	<style 
+	    name="UITableViewCellSingle"
+	    parent="UITableViewCell"
+	    >
+		<item name="android:layout_marginTop">5sp</item>
+		<item name="android:layout_marginBottom">5sp</item>
+	    <item name="android:background">@drawable/iphone__ui_table_view_cell_single</item>
+	</style>
+	<style
+		name="UITableViewCellTop"
+		parent="UITableViewCell"
+	>
+	    <item name="android:layout_marginTop">5sp</item>
+		<item name="android:background">@drawable/iphone__ui_table_view_cell_top</item>
+	</style>
+	<style
+		name="UITableViewCellMiddle"
+		parent="UITableViewCell"
+	>
+		<item name="android:background">@drawable/iphone__ui_table_view_cell_middle</item>
+	</style>
+	<style
+		name="UITableViewCellBottom"
+		parent="UITableViewCell"
+	>
+		<item name="android:layout_marginBottom">5sp</item>
+		<item name="android:background">@drawable/iphone__ui_table_view_cell_bottom</item>
+	</style>
+</resources>

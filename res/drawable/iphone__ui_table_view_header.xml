@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+		<shape android:shape="rectangle">
+		    <padding
+		        android:left="15sp"
+		        android:right="15sp"
+		        android:top="2sp"
+		        android:bottom="2sp"
+		    />
+		    <gradient
+		    	android:angle="270"
+		    	android:startColor="@color/iphone__ui_table_header_top"
+		    	android:endColor="@color/iphone__ui_table_header_bottom"/>
+		</shape>
+    </item>
+</selector>

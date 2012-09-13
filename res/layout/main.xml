@@ -3,9 +3,25 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical" >
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/main"
-	/>
+	<RelativeLayout
+		style="@style/UINavigationBar">
+		<ImageView
+			android:id="@+id/main_search"
+			style="@style/UIBarButtonImageLeft"
+			android:src="@android:drawable/ic_menu_search"
+			android:contentDescription="@string/search"/>
+		<TextView
+			style="@style/UINavigationBarTitle"
+			android:text="@string/main"
+		/>
+		<ImageView
+			android:id="@+id/main_post"
+			style="@style/UIBarButtonImageRight"
+			android:src="@android:drawable/ic_menu_add"
+			android:contentDescription="@string/post"/>
+	</RelativeLayout>
+	<ListView
+		android:id="@+id/main_list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"/>
 </LinearLayout>

@@ -3,9 +3,22 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical" >
-	<TextView
-		android:layout_width="wrap_content"
+	<RelativeLayout
+		style="@style/UINavigationBar">
+		<ImageView
+			android:id="@+id/post_back"
+			style="@style/UIBarButtonImageLeft"
+			android:src="@drawable/navigation_back"
+			android:contentDescription="@string/back"/>
+		<TextView
+			style="@style/UINavigationBarTitle"
+			android:text="@string/post"
+		/>
+	</RelativeLayout>
+	<EditText
+		android:id="@+id/post_input"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/post"
+		android:hint="@string/post_hint"
 	/>
 </LinearLayout>

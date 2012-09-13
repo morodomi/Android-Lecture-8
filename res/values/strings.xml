@@ -2,7 +2,9 @@
 <resources>
 	<string name="app_name">Sample Twitter Client</string>
 	<string name="main">Main</string>
-	<string name="login">Login</string>
 	<string name="post">Post</string>
 	<string name="search">Search</string>
+	<string name="back">Back</string>
+	<string name="post_hint">Tweet Something!</string>
+	<string name="search_hint">Search Keyword</string>
 </resources>

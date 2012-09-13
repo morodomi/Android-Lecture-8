@@ -3,9 +3,21 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical" >
-	<TextView
-		android:layout_width="wrap_content"
+	<RelativeLayout
+		style="@style/UINavigationBar">
+		<ImageView
+			android:id="@+id/search_back"
+			style="@style/UIBarButtonImageLeft"
+			android:src="@drawable/navigation_back"
+			android:contentDescription="@string/back"/>
+		<TextView
+			style="@style/UINavigationBarTitle"
+			android:text="@string/search"
+		/>
+	</RelativeLayout>
+	<EditText
+		android:id="@+id/search_input"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/search"
-	/>
+		android:hint="@string/search_hint"/>
 </LinearLayout>
