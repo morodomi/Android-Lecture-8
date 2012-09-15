@@ -14,7 +14,7 @@ In this Lecture, you will make a Twitter Client App!
 ##Questions
  * Go to http://dev.twitter.com and register your account as developer.
  * create your own application and get consumer key and consumer secret.
- * Create LoginActivity. In this activity, you need to implement Twitter OAuth. 
+ * Implement Twitter Login process if user is not logged in. Use browser and callback function.
  * Create MainActivity. In this activity, you need to implement list of tweets by followings.
  * Create PostActivity. In this activity, you need to implement tweet functionality.
  * Create SearchActivity. In this activity, you need to implement searching functionality.
