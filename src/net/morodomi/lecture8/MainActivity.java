@@ -5,7 +5,9 @@ import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -16,7 +18,6 @@ import android.view.View.OnClickListener;
  * @version 1.0.0 updated on 2012-09-13
  */
 public class MainActivity extends Activity {
-	private static final int REQUEST_TWITTER_LOGIN = 1;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -61,21 +62,42 @@ public class MainActivity extends Activity {
 		// if there is no token or token secret
 		if(token == null || tokenSecret == null) {
 			// launch browser to login
-			
+			try {
+				String url = Config.provider.retrieveRequestToken(Config.consumer, Config.TWITTER_CALLBACK);
+				this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+			} catch(Exception e) {
+				Log.e(Config.TAG, e.getMessage(), e);
+			}
 		}
 		// if token and token secret are not null, set to consumer
 		Config.consumer.setTokenWithSecret(token, tokenSecret);
+
+		// get timeline
 	}
 
 	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// get twitter token and token secret and save them to shared preferences.
-		if(resultCode == RESULT_OK && requestCode == REQUEST_TWITTER_LOGIN) {
-			SharedPreferences.Editor editor = getSharedPreferences(Config.PREFERENCES_NAME, MODE_PRIVATE).edit();
-			editor.putString("token", Config.consumer.getToken());
-			editor.putString("token_secret", Config.consumer.getTokenSecret());
-			editor.commit();
-			editor = null;
-		}
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		Uri uri = intent.getData();
+        if (uri!=null && uri.toString().startsWith(Config.TWITTER_CALLBACK)) {
+            String verifier=uri.getQueryParameter(
+                oauth.signpost.OAuth.OAUTH_VERIFIER);
+            try {
+                Config.provider.retrieveAccessToken(Config.consumer,verifier);
+
+                //トークンの書き込み
+                SharedPreferences pref=getSharedPreferences(
+                    "token",MODE_PRIVATE);
+                SharedPreferences.Editor editor=pref.edit();
+    			editor.putString("token", Config.consumer.getToken());
+    			editor.putString("token_secret", Config.consumer.getTokenSecret());
+                editor.commit();
+                
+                // get timeline
+                
+            } catch(Exception e) {
+            	Log.e(Config.TAG, e.getMessage(), e);
+            }
+        }
 	}
 }
