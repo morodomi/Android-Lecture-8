@@ -21,6 +21,7 @@ In this Lecture, you will make a Twitter Client App!
 
 ##References
 http://dev.twitter.com
+http://www.saturn.dti.ne.jp/npaka/android/OAuthTwitterEx/index.html (Android - OAuth)
 
 ##License
     Copyright (c) on 2012, Masahiro Morodomi
