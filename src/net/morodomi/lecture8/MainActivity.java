@@ -27,8 +27,9 @@ public class MainActivity extends Activity {
 		Config.consumer = new CommonsHttpOAuthConsumer(
 				Config.TWITTER_CONSUMER_KEY, Config.TWITTER_CONSUMER_SECRET);
 		Config.provider = new DefaultOAuthProvider(
-				Config.TWITTER_REQUEST_TOKEN_URL, Config.TWITTER_AUTHORIZE_URL,
-				Config.TWITTER_ACCESS_TOKEN_URL);
+				Config.TWITTER_REQUEST_TOKEN_URL,
+				Config.TWITTER_ACCESS_TOKEN_URL,
+				Config.TWITTER_AUTHORIZE_URL);
 		// set click event on post button
 		findViewById(R.id.main_post).setOnClickListener(new OnClickListener() {
 			@Override
@@ -79,7 +80,7 @@ public class MainActivity extends Activity {
 			String verifier = uri
 					.getQueryParameter(oauth.signpost.OAuth.OAUTH_VERIFIER);
 			try {
-				Config.provider.retrieveAccessToken(Config.consumer, verifier);
+				Config.provider.retrieveRequestToken(Config.consumer, verifier);
 
 				// トークンの書き込み
 				SharedPreferences.Editor editor = getSharedPreferences(
