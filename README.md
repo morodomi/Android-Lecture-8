@@ -20,8 +20,9 @@ In this Lecture, you will make a Twitter Client App!
  * Create SearchActivity. In this activity, you need to implement searching functionality.
 
 ##References
+
 http://dev.twitter.com
-http://www.saturn.dti.ne.jp/npaka/android/OAuthTwitterEx/index.html (Android - OAuth)
+http://www.saturn.dti.ne.jp/npaka/android/OAuthTwitterEx/index.html
 
 ##License
     Copyright (c) on 2012, Masahiro Morodomi
